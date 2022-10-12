@@ -1,0 +1,8 @@
+#IGNORE
+
+node_modules
+dist
+node
+.firebase
+.vscore
+ui-debug.log

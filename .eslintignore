@@ -1,0 +1,7 @@
+# INVALID
+/dist
+/webpack.config.js
+/.eslint.json
+/.tsconfig.json
+/firebase.config.js
+/functions

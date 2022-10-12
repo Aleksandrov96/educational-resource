@@ -1,0 +1,287 @@
+$color-primary: #18AEEF;
+$color-secondary:#EE4747;
+$box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+@mixin input() {
+  display: flex;
+  align-self: center;
+  width: 25rem;
+  height: 3rem;
+  padding-left: .5rem;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  margin-top: .25rem;
+  margin-bottom: .5rem;
+  
+  &:focus {
+    border: 2px solid #808080;
+  }
+}
+
+@mixin button() {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 25px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: .2rem;  
+  transition: .2s ease-in-out;
+  background-color: $color-primary;
+
+  &:hover {
+    background-color: #fff;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+  &:enabled:active {
+      transform: translateY(4px);
+  }
+
+  &:disabled {
+    cursor: default;
+    border: 1px solid #82ccec;
+    background-color: #82ccec;
+    color: #fff;
+  }
+}
+
+@mixin textarea {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 5rem;
+  padding-left: .5rem;
+  padding-top: .5rem;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  margin-top: .25rem;
+  margin-bottom: .5rem;
+  resize: none;
+
+  &:focus {
+    border: 2px solid #808080;
+  }
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  &__textarea {
+    @include textarea();
+    width: 36rem;
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    @include input();
+    width: 36rem;
+  }
+
+  &__questionField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      box-shadow: $box-shadow;
+      padding: .5rem;
+      border-radius: 1.5rem;
+      margin-top: 1rem;
+
+      &--text {
+        letter-spacing: .2rem;
+        color: #808080;
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+      }
+    }
+
+    &-textarea {
+      @include textarea();
+      width: 35rem;
+    }
+  }
+
+  &__optionsField {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    padding: 1rem .5rem;
+    margin: .5rem;
+    box-shadow: $box-shadow;
+    border-radius: 1.5rem;
+
+    &-input {
+      @include input();
+    }
+
+    &-delete {
+      border: none;
+      color: #fff;
+      padding: 16px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 16px;
+      letter-spacing: .2rem;  
+      transition: .2s ease-in-out;
+      background-color: $color-secondary;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #fff;
+        color: black;
+        border: 1px solid $color-secondary;
+      }
+    
+      &:active {
+          transform: translateY(4px);
+      }
+    }
+
+    &-checkbox {
+      display: flex;
+      cursor: pointer;
+      position: relative;
+      align-items: center;
+
+      input {
+        display: flex;
+        height: 3rem;
+        width: 3rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+        transition-duration: 0.3s;
+        background-color: #fff;
+        cursor: pointer;
+
+        &:checked {
+          background-color: $color-primary;
+        }
+
+        &:active {
+          border: 2px solid #808080;
+        }
+      }
+    }
+  }
+
+  &__title {
+    letter-spacing: .2rem;
+    color: #808080;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  &__error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2rem;
+    margin-bottom: 1rem;
+    
+    &-text {
+      color: $color-secondary;
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+
+  &__addOption {
+    @include button();
+    width: 50%;
+    padding: 15px 45px;
+    align-self: flex-start;
+  }
+
+  &__btn {
+    @include button();
+  }    
+
+  .showEditQuestionsForm {
+    @include button();
+    background-color: $color-secondary;
+    border: 1px solid transparent;
+    width: 50%;
+    padding: 15px 45px;
+    align-self: flex-start;
+  }  
+
+  &__questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    box-shadow: $box-shadow;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-top: .5rem;
+
+    &-remove {
+      display: flex;
+      align-self: flex-end;
+      justify-content: center;
+      margin-top: 1rem;
+      width: 10%;
+      border: 1px solid transparent;
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1rem;
+      letter-spacing: .2rem;  
+      transition: .2s ease-in-out;
+      background-color: $color-secondary;
+      border-radius: 4px;
+      
+      &:hover {
+        background-color: #fff;
+        color: $color-secondary;
+        border: 1px solid $color-secondary;
+      }
+    
+      &:active {
+          transform: translateY(4px);
+      }
+    }
+  }
+}

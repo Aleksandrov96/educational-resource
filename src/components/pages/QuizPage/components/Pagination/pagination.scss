@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+
+  &__btn {
+    margin: .5rem;
+    padding: .3rem .6rem;
+    display: block;
+    border: 1px solid #c4c8d8;
+    border-radius: 5px;
+    transition: .2s ease-out;
+    color: #0096db;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #e8e9ef;
+    }
+
+    &-active {
+      margin: .5rem;
+      padding: .3rem .6rem;
+      display: block;
+      border: 1px solid #c4c8d8;
+      border-radius: 5px;
+      transition: .2s ease-out;
+      background-color: #0096db;
+      color: #fff;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #e8e9ef;
+        color: #0096db;
+        border: 1px solid #0096db;
+      }
+    }
+  }
+}

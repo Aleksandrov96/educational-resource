@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <title>Education</title>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="portal"></div>
+    <script>
+      document.querySelectorAll( 'div[data-oembed-url]' ).forEach( element => {
+          // Discard the static media preview from the database (empty the <div data-oembed-url="...">).
+          while ( element.firstChild ) {
+              element.removeChild( element.firstChild );
+          }
+  
+          // Generate the media preview using Iframely.
+          iframely.load( element, element.dataset.oembedUrl ) ;
+      } );
+  </script>
+</body>
+</html>

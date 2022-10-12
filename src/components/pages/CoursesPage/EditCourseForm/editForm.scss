@@ -1,0 +1,105 @@
+$color-primary: #18AEEF;
+$color-secondary:#EE4747;
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  
+  &__input {
+    display: flex;
+    align-self: center;
+    width: 25rem;
+    height: 3rem;
+    padding-left: .5rem;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    
+    &:focus {
+      border: 2px solid #808080;
+    }
+  }
+
+  &__textarea {
+    display: flex;
+    align-self: center;
+    width: 25rem;
+    height: 5rem;
+    padding-left: .5rem;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    resize: none;
+
+    &:focus {
+      border: 2px solid #808080;
+    }
+  }
+
+  &__title {
+    letter-spacing: .2rem;
+    color: #808080;
+    font-weight: 400;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  &__error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2rem;
+    margin-bottom: 1rem;
+    
+    &-text {
+      color: #ff0000;
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+
+  &__btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 25px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: .2rem;  
+    transition: .2s ease-in-out;
+    background-color: $color-primary;
+  
+    &:hover {
+      background-color: #fff;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+  
+    &:active {
+        transform: translateY(4px);
+    }
+
+    &:disabled {
+      cursor: default;
+      border: 1px solid #82ccec;
+      background-color: #82ccec;
+      color: #fff;
+    }
+  }    
+}

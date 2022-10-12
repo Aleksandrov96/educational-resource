@@ -1,0 +1,68 @@
+.mainPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #EAEEF7;
+  height: auto;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+    &-description {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      border-radius: 2rem;
+      background-color: #fff;
+      margin-top: 1rem;
+      padding: 1.5rem;
+      font-size: 22px;
+      margin-bottom: 2rem;
+      height: auto;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  
+  
+      &--link {
+        background-color: #f3206d;
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        padding: .5rem 2rem;
+        border-radius: .5rem;
+        width: 12%;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+
+    &-title {
+      margin-top: 3rem;
+    }
+
+    &-showcase {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+  
+      .employee {
+        background-color: #411fed;
+        border-radius: 2rem;
+        display: flex;
+        width: 58%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+  
+      .education {
+        background-color: #3db753;
+        border-radius: 2rem;
+        display: flex;
+        width: 40%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+    }
+  }
+}

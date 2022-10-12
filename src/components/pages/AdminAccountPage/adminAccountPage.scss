@@ -1,0 +1,109 @@
+$color-primary: #18AEEF;
+
+@mixin button {
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  color: #fff;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: .2rem;  
+  transition: .3s all;
+  background-color: #18AEEF;
+  border: 1px solid transparent;
+
+  &:hover {
+      background-color: #fff;
+      color: #18AEEF;
+      border: 1px solid #18AEEF;
+  }
+
+  &:active {
+      transform: translateY(4px);
+  }
+}
+
+.adminAccountPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-height: 150vh;
+  background: #EAEEF7;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 2rem;
+    height: auto;
+
+    .search {
+      .ais-SearchBox-input {
+        background-color: #fff;
+        font-size: 18px;
+        padding: 1.5rem;
+        border: 1px solid transparent;
+        outline: none;
+      
+        &:focus {
+          border-color: $color-primary;
+        }
+      }
+    
+      .table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    
+        .searchTd {
+          padding: 0;
+
+          .ais-SearchBox-input {
+            width: 100%;
+          }
+        }
+    
+        th, td {
+          border: 1px solid #ddd;
+          padding: 1.5rem;
+        } 
+      
+        tr:nth-child(even){
+          background-color: #f2f2f2;
+        }
+      
+        tr:hover {
+          background-color: #ddd;
+        }
+      
+        th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: $color-primary;
+          color: white;
+        }
+        
+        .controlTd {
+          padding: .5rem;
+          background-color: #EAEEF7;
+    
+          .ais-Pagination {
+            margin: 0;
+            display: flex;
+            justify-content: end;
+          }
+      
+          .ais-Pagination-link {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

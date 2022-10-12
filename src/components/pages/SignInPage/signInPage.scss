@@ -1,0 +1,123 @@
+$color-primary: #18AEEF;
+
+.signInFirebase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+
+  &__auth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    width: 80rem;
+    height: 35rem;
+    background-color:#fff;
+    overflow: hidden;
+
+    &-left {
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px -2px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+      img {
+        width: 55rem;
+        height: 36rem;
+      }
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+
+      .googleBtn {
+        display: flex;
+        margin-top: 7rem;
+      }
+
+      .signUp {
+        margin-top: 3rem;
+        font-family: 'Courier New', Courier, monospace;
+        color: #00000083;
+      }
+
+      .signIn {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        font-family: 'Courier New', Courier, monospace;
+        color: #00000083;
+      }
+
+      .signInForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 10rem;
+
+        &__btn {
+          display: flex;
+          border: 1px solid transparent;
+          color: #fff;
+          padding: 10px 90px;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 16px;
+          letter-spacing: .2rem;  
+          transition: .3s all;
+          background-color: $color-primary;
+
+          &:hover {
+              background-color: #fff;
+              color: $color-primary;
+              border: 1px solid $color-primary;
+          }
+
+          &:enabled:active {
+              transform: translateY(4px);
+          }
+        }
+
+        &__input {
+          width: 13.5rem;
+          height: 2.5rem;
+          outline: none;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          background-color: #f8f8f8;
+          font-size: 16px;
+          margin-top: .25rem;
+          margin-bottom: 1rem;
+          text-align: center;
+          
+          &:focus {
+            border: 2px solid #808080;
+          }
+        }
+
+        &__labelText {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          height: 2.5rem;
+
+          &-error {
+            color: #FF0000;
+            margin-top: .1rem;
+            margin-bottom: .1rem;
+          }
+        }
+      }
+    }
+  }
+}
